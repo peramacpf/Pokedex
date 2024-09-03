@@ -4,20 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wikipédia Pokémon</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Wikipédia Pokémon</h1>
-    <form action="#" method="post" name="formulario" id="formulario">
-        <legend>Pesquisar um Pokémon</legend>
-        <label>Informe o nome de um Pokémon</label>
-        <input type="text" name="nome_pokemon" id="nome_pokemon" placeholder="Nome do Pokémon">
-        <br>
-        <input type="submit" value="PESQUISAR" name="pesquisar" id="pesquisar">
-    </form>
-    <h2 name="pokemon" id="pokemon"></h2>
-    <ul name="tipos" id="tipos" style="list-style: none;"></ul>
-    <ul name="habilidades" id="habilidades" style="list-style: none;"></ul>
-    <img id="imagemPoke" alt="Imagem do Pokémon" hidden>
+    <header>
+        <h1>Wikipédia Pokémon</h1>
+    </header>
+    <main>
+        <article id="conteudo">
+            <div id="formu">
+                <section id="formulario">
+                    <fieldset>
+                        <legend>Pesquisar um Pokémon</legend>
+                        <form action="#" method="post" name="formulario" id="formulario">
+                            <label>Informe o nome de um Pokémon:</label>
+                            <input type="text" name="nome_pokemon" id="nome_pokemon" placeholder="Nome do Pokémon">
+                            <br>
+                            <input type="submit" value="PESQUISAR" name="pesquisar" id="pesquisar">
+                        </form>
+                        <div id="local_pokemon">
+                            <h2 name="pokemon" id="pokemon"></h2>
+                            <div id="imagemFundo">
+                                <img id="imagemPoke" alt="Imagem do Pokémon" hidden>
+                            </div>
+                            <h2 id="tipos_habilidades" hidden>Tipos e Habilidades</h2>
+                            <ul name="tipos" id="tipos" style="list-style: none;"></ul>
+                            <ul name="habilidades" id="habilidades" style="list-style: none;"></ul>
+                        </div>
+                    </fieldset>
+                </section>
+            </div>
+        </article>
+    </main>
+    <footer></footer>
 </body>
 <script type="text/javascript" src="scripts.js"></script>
 </html>
