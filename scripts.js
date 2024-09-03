@@ -59,12 +59,17 @@ formulario.addEventListener('submit', function(event) {
                     fetch(habilidades.ability.url)
                     .then(response => response.json())
                     .then(dadosHabilidades => {
-                        const englishDescription = dadosHabilidades.effect_entries.find(idioma => idioma.language.name === 'en'
+                        const descricaoHabilidade = dadosHabilidades.effect_entries.find(idioma => idioma.language.name === 'en'
                         );
 
-                        li.textContent = dadosHabilidades.name + ": " + englishDescription.effect;
+                        li.textContent = dadosHabilidades.name + ": " + descricaoHabilidade.effect;
                     });
                 listaHabilidades.appendChild(li);
+
+                const imagem = document.getElementById("imagemPoke");
+
+                imagem.src = dados.sprites.front_default;
+                imagem.style.display = "block";
             });
             } else {
                 console.log("Pokémon não encontrado!");
